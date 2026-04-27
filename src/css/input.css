@@ -11,7 +11,7 @@
 }
 
 .mobile-menu {
-  @apply transition-transform translate-x-200 duration-470 pointer-events-none;
+  @apply transition-transform translate-x-500 duration-400 pointer-events-none;
 }
 
 nav.active {
@@ -39,7 +39,3 @@ nav.active {
 .hamburger-button.active span:nth-child(3) {
   @apply -rotate-45 -translate-y-2;
 }
-
-/* * {
-  outline: 1px solid red;
-} */
