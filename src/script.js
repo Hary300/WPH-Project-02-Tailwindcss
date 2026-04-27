@@ -1,9 +1,49 @@
-const header = document.querySelector('header');
+// dark mode button
+const darkButton = document.querySelector('.dark-button');
+darkButton.addEventListener('click', function () {
+  document.documentElement.classList.toggle('dark');
+
+  document.documentElement.classList.contains('dark')
+    ? (darkButton.innerHTML = `
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke-width="1.5"
+  stroke="currentColor"
+  class="size-4.5"
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+  />
+</svg>
+`)
+    : (darkButton.innerHTML = `
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  class="size-4.5"
+>
+  <path
+    fill-rule="evenodd"
+    d="M7.455 2.004a.75.75 0 0 1 .26.77 7 7 0 0 0 9.958 7.967.75.75 0 0 1 1.067.853A8.5 8.5 0 1 1 6.647 1.921a.75.75 0 0 1 .808.083Z"
+    clip-rule="evenodd"
+  />
+</svg>
+      `);
+});
+
+// offset menu
 const hamburgerButton = document.querySelector('.hamburger-button');
+const offsetMenu = document.querySelector('.offset-menu');
 
 console.log(hamburgerButton);
 
 hamburgerButton.addEventListener('click', function () {
-  header.classList.toggle('active');
   hamburgerButton.classList.toggle('active');
+  offsetMenu.classList.toggle('active');
+  document.body.classList.toggle('overflow-hidden');
 });

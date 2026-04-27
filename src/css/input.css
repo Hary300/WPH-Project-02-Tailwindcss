@@ -11,12 +11,10 @@
 }
 
 .mobile-menu {
-  @apply transition-transform translate-x-full duration-500 pointer-events-none;
+  @apply transition-transform translate-x-200 duration-470 pointer-events-none;
 }
 
-header.active .background,
-header.active nav,
-header.active .button-container {
+nav.active {
   @apply translate-x-0 pointer-events-auto;
 }
 
@@ -42,6 +40,6 @@ header.active .button-container {
   @apply -rotate-45 -translate-y-2;
 }
 
-* {
+/* * {
   outline: 1px solid red;
-}
+} */
