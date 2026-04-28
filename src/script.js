@@ -47,3 +47,55 @@ hamburgerButton.addEventListener('click', function () {
   offsetMenu.classList.toggle('active');
   document.body.classList.toggle('overflow-hidden');
 });
+
+// marquee
+
+const logoTrack = document.querySelector('.logo-track');
+let position = 0;
+let speed = 1;
+
+function animateMarquee() {
+  if (!isDragging) {
+    position -= speed;
+  }
+
+  logoTrack.style.transform = `translateX(${position}px)`;
+
+  const half = logoTrack.scrollWidth / 2;
+
+  if (position <= -half) {
+    position += half;
+  }
+
+  requestAnimationFrame(animateMarquee);
+}
+
+let isDragging = false;
+let startX;
+let currentX;
+let previousPosition = 0;
+
+logoTrack.addEventListener('mousedown', function (e) {
+  isDragging = true;
+  startX = e.clientX;
+  previousPosition = position;
+});
+
+document.addEventListener('mousemove', function (e) {
+  if (!isDragging) return;
+
+  currentX = e.clientX;
+
+  const deltaX = currentX - startX;
+
+  position = previousPosition + deltaX;
+
+  logoTrack.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mouseup', function () {
+  isDragging = false;
+  logoTrack.style.cursor = 'grab';
+});
+
+animateMarquee();

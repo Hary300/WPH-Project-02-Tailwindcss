@@ -16,7 +16,7 @@
   <body
     class="dark:text-white dark:bg-black relative flex flex-col font-quicksand"
   >
-    <!-- 1. Header -->
+    <!-- 1. Header Section -->
     <header
       id="header"
       class="container w-full flex justify-between sticky h-16 top-0 p-4 backdrop-blur-xl z-10 md:px-[30px] lg:px-[80px] xl:px-[140px] m-auto"
@@ -101,11 +101,11 @@
     <!-- 2. Hero Section -->
     <section
       id="hero"
-      class="container flex flex-col lg:flex lg:flex-row lg:relative items-center pt-5 lg:py-15 xl:py-52 md:px-[30px] lg:px-[80px] xl:px-[140px] m-auto w-full"
+      class="container flex flex-col lg:flex lg:flex-row lg:relative items-center pt-5 lg:py-15 xl:py-45 lg:px-[80px] xl:px-[140px] m-auto w-full"
     >
       <!-- 2.1 Hero text -->
       <div
-        class="flex flex-col gap-5 w-full px-4 md:px-0 lg:w-[50%] xl:w-[55%]"
+        class="flex flex-col gap-5 w-full px-4 md:px-[30px] lg:w-[50%] xl:w-[55%]"
       >
         <h1 class="font-bold text-4xl xl:text-5xl lg:leading-14 xl:leading-16">
           Your Tech Partner for
@@ -124,20 +124,20 @@
 
       <!-- 2.3 Hero Image -->
       <div
-        class="lg:absolute lg:-z-1 lg:right-0 lg:-top-10 w-full lg:w-[50%] xl:w-[60%]"
+        class="lg:absolute lg:-z-1 lg:right-0 lg:-top-10 lg:bottom-0 w-full lg:w-[43%] xl:w-[55%] 2xl:w-[43%]"
       >
-        <div class="relative">
+        <div class="relative h-full w-full">
           <!-- Logo untuk Light Mode -->
           <img
             src="./assets/img/light/Image Hero.svg"
             alt="lighting"
-            class="w-full h-auto block dark:hidden"
+            class="block w-full h-full dark:hidden"
           />
           <!-- Logo untuk dark Mode -->
           <img
             src="./assets/img/dark/Image Hero (1).svg"
             alt="darking"
-            class="w-full h-auto hidden dark:block"
+            class="w-full hidden dark:block"
           />
           <!-- gradient -->
           <div
@@ -147,10 +147,220 @@
       </div>
     </section>
 
-    <main
-      class="container h-[2000px] flex flex-col items-center px-4 pb-4 m-auto"
+    <!-- 3. Marquee Section -->
+    <section
+      id="marquee"
+      class="container flex flex-col gap-2 md:gap-4 lg:gap-6 mx-auto"
     >
-      <!-- END OF HERO SECTION -->
+      <!-- 3.1 text -->
+      <h2 class="font-bold text-center p-4">
+        Trusted by Global Innovators & Leading Brands
+      </h2>
+
+      <!-- 3.2 marquee -->
+      <div
+        class="logo-slider relative pseudo-before pseudo-after overflow-hidden"
+      >
+        <div
+          class="logo-track flex justify-center items-center w-max h-full [&>div]:mr-5 [&>div]:shrink-0 cursor-grab select-none"
+        >
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/adobe.svg"
+              alt="adobe logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/airbnb.svg"
+              alt="airbnb logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/databricks.svg"
+              alt="databricks logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/dropbox.svg"
+              alt="dropbox logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/netflix.svg"
+              alt="netflix logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/paypal.svg"
+              alt="paypal logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/postman.svg"
+              alt="postman logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/upwork.svg"
+              alt="upwork logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/zoom.svg"
+              alt="zoom logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/adobe.svg"
+              alt="adobe logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/airbnb.svg"
+              alt="airbnb logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/databricks.svg"
+              alt="databricks logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/dropbox.svg"
+              alt="dropbox logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/netflix.svg"
+              alt="netflix logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/paypal.svg"
+              alt="paypal logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/postman.svg"
+              alt="postman logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/upwork.svg"
+              alt="upwork logo"
+              class="marquee-logo-style"
+            />
+          </div>
+          <div class="logo-item group">
+            <img
+              src="./assets/img/marquee-logo/zoom.svg"
+              alt="zoom logo"
+              class="marquee-logo-style"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main
+      class="container h-[2000px] flex flex-col items-center px-4 py-20 m-auto"
+    >
+      <!-- 4. Solution -->
+      <section
+        class="flex flex-col items-center justify-center text-center px-4 lg:px-36"
+      >
+        <!--4.1 Solution text  -->
+        <div class="mb-6 lg:mb-16">
+          <h2 class="font-bold text-[28px] lg:text-[40px] mb-2.5">
+            End-to-End IT Solutions That Drive Results
+          </h2>
+          <p
+            class="font-medium text-[14px] lg:text-[18px] mb-4.5 dark:text-[#A4A7AE]"
+          >
+            From strategy to execution, we deliver solutions that grow your
+            business.
+          </p>
+        </div>
+        <!-- 4.2 Solution Card -->
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 mt-0">
+          <!-- light mode card -->
+          <img
+            src="/assets/img/light/Card1.svg"
+            alt="Project delivered"
+            class="block dark:hidden"
+          />
+          <img
+            src="/assets/img/light/Card2.svg"
+            alt="Years of experience"
+            class="block dark:hidden"
+          />
+          <img
+            src="/assets/img/light/Card3.svg"
+            alt="Industry Awards won"
+            class="block dark:hidden"
+          />
+          <img
+            src="/assets/img/light/Card4.svg"
+            alt="client satisfactory rate"
+            class="block dark:hidden"
+          />
+          <!-- dark mode card -->
+          <img
+            src="/assets/img/dark/Card1.svg"
+            alt="Project delivered"
+            class="hidden dark:block"
+          />
+          <img
+            src="/assets/img/dark/Card2.svg"
+            alt="Years of experience"
+            class="hidden dark:block"
+          />
+          <img
+            src="/assets/img/dark/Card3.svg"
+            alt="Industry Awards won"
+            class="hidden dark:block"
+          />
+          <img
+            src="/assets/img/dark/Card4.svg"
+            alt="client satisfactory rate"
+            class="hidden dark:block"
+          />
+        </div>
+      </section>
+
       <!-- 13. Footer -->
     </main>
     <footer class="m-auto p-3">
