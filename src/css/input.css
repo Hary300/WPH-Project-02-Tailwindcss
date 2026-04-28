@@ -25,7 +25,7 @@ nav.active {
 }
 
 .btn {
-  @apply text-sm w-full font-bold text-white bg-[#FF623E] rounded-full p-2;
+  @apply text-sm w-full font-bold text-white bg-[#FF623E] rounded-full p-2 cursor-pointer;
 }
 
 .hamburger-button.active span:nth-child(1) {
