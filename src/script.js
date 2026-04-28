@@ -40,8 +40,6 @@ darkButton.addEventListener('click', function () {
 const hamburgerButton = document.querySelector('.hamburger-button');
 const offsetMenu = document.querySelector('.offset-menu');
 
-console.log(hamburgerButton);
-
 hamburgerButton.addEventListener('click', function () {
   hamburgerButton.classList.toggle('active');
   offsetMenu.classList.toggle('active');
@@ -99,3 +97,27 @@ document.addEventListener('mouseup', function () {
 });
 
 animateMarquee();
+
+// Accodion Our process section
+
+const items = document.querySelectorAll('.item');
+
+items.forEach((item, index) => {
+  const btn = item.querySelector('.acc-chev-btn');
+
+  btn.addEventListener('click', function () {
+    const isActive = item.classList.contains('active');
+    const content = item.querySelector('p');
+    const icon = btn.querySelector('svg');
+
+    if (!isActive) {
+      icon.classList.add('rotate-180');
+      item.classList.add('active');
+      content.style.height = content.scrollHeight + 'px';
+    } else {
+      icon.classList.remove('rotate-180');
+      item.classList.remove('active');
+      content.style.height = '0px';
+    }
+  });
+});

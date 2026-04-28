@@ -57,3 +57,12 @@ nav.active {
 .marquee-logo-style {
   @apply grayscale-100 transition-all duration-300 group-hover:grayscale-0 pointer-events-none;
 }
+
+/* accordion our process */
+
+.number {
+  z-index: 5;
+}
+.item.active button {
+  margin-bottom: 10px;
+}
