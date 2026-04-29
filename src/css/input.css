@@ -43,13 +43,13 @@ nav.active {
 /* pesudo before */
 
 .pseudo-before {
-  @apply before:bg-linear-to-r  before:from-white dark:before:from-black before:from-10% before:to-transparent before:z-5 before:w-20 before:h-full before:absolute before:top-0 before:left-0 before:pointer-events-none;
+  @apply before:bg-linear-to-r  before:from-white dark:before:from-black before:from-10% before:to-transparent before:z-5 before:w-20 lg:before:w-40 before:h-full before:absolute before:top-0 before:left-0 before:pointer-events-none;
 }
 
 /* pseudo after */
 
 .pseudo-after {
-  @apply after:bg-linear-to-l  after:from-white dark:after:from-black after:from-10% after:to-transparent after:z-5 after:w-20 after:h-full after:absolute after:top-0 after:right-0 after:pointer-events-none;
+  @apply after:bg-linear-to-l  after:from-white dark:after:from-black after:from-10% after:to-transparent after:z-5 after:w-20 lg:after:w-40  after:h-full after:absolute after:top-0 after:right-0 after:pointer-events-none;
 }
 
 /* marquee logo style */
@@ -66,3 +66,5 @@ nav.active {
 .item.active button {
   margin-bottom: 10px;
 }
+
+/* tabs */

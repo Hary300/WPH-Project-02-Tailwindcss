@@ -121,3 +121,33 @@ items.forEach((item, index) => {
     }
   });
 });
+
+// tabs
+const tabButtons = document.querySelectorAll('.tabs-buttons button');
+const tabContents = document.querySelectorAll('.tab-contents .content');
+
+tabButtons.forEach((button) => {
+  button.addEventListener('click', function () {
+    let btnDataTab = this.dataset.tab;
+
+    // reset button
+    tabButtons.forEach((button) => {
+      button.dataset.active = 'false';
+    });
+
+    // change state
+    this.dataset.active = 'true';
+
+    tabContents.forEach((content) => {
+      // reset content
+      content.dataset.active = 'false';
+
+      // change state
+      const contentDataTab = content.dataset.tab;
+
+      if (btnDataTab === contentDataTab) {
+        content.dataset.active = 'true';
+      }
+    });
+  });
+});
