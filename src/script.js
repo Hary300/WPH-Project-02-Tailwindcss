@@ -151,3 +151,28 @@ tabButtons.forEach((button) => {
     });
   });
 });
+
+// carousel
+
+const dotButtons = document.querySelectorAll('.dot');
+const cards = document.querySelectorAll('.testimonial-card');
+
+let activeIndex;
+
+dotButtons.forEach((button, index) => {
+  button.addEventListener('click', function () {
+    // reset button
+    dotButtons.forEach((button) => {
+      button.dataset.active = 'false';
+    });
+
+    activeIndex = index;
+    this.dataset.active = 'true';
+
+    cards.forEach((card, index) => {
+      if (activeIndex === index) {
+        cards[index].scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
