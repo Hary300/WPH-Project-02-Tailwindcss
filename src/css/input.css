@@ -11,7 +11,7 @@
 }
 
 .mobile-menu {
-  @apply transition-transform translate-x-500 duration-400 pointer-events-none;
+  @apply transition-transform translate-x-500 duration-400 pointer-events-none sm:left-[calc((100vw-640px)/2)] md:left-[calc((100vw-768px)/2)];
 }
 
 nav.active {
@@ -40,16 +40,16 @@ nav.active {
   @apply -rotate-45 -translate-y-2;
 }
 
-/* pesudo before */
+/* pesudo before marquee */
 
 .pseudo-before {
-  @apply before:bg-linear-to-r  before:from-white dark:before:from-black before:from-10% before:to-transparent before:z-5 before:w-20 lg:before:w-40 before:h-full before:absolute before:top-0 before:left-0 before:pointer-events-none;
+  @apply before:bg-linear-to-r before:from-white dark:before:from-black before:from-10% before:to-transparent before:z-5 before:w-20 lg:before:w-40 before:h-full before:absolute before:top-0 before:left-0 before:pointer-events-none;
 }
 
-/* pseudo after */
+/* pseudo after marquee */
 
 .pseudo-after {
-  @apply after:bg-linear-to-l  after:from-white dark:after:from-black after:from-10% after:to-transparent after:z-5 after:w-20 lg:after:w-40  after:h-full after:absolute after:top-0 after:right-0 after:pointer-events-none;
+  @apply after:bg-linear-to-l after:from-white dark:after:from-black after:from-10% after:to-transparent after:z-5 after:w-20 lg:after:w-40  after:h-full after:absolute after:top-0 after:right-0 after:pointer-events-none;
 }
 
 /* marquee logo style */
@@ -66,5 +66,3 @@ nav.active {
 .item.active button {
   margin-bottom: 10px;
 }
-
-/* tabs */

@@ -155,9 +155,16 @@ tabButtons.forEach((button) => {
 // carousel
 
 const dotButtons = document.querySelectorAll('.dot');
-const cards = document.querySelectorAll('.testimonial-card');
+const track = document.querySelector('.testimony-track');
+const outerWrapper = document.querySelector('.outer-wrapper');
+const cards = document.querySelectorAll('.card');
 
-let activeIndex;
+let activeIndex = 1;
+
+dotButtons[activeIndex].dataset.active = 'true';
+renderCarousel();
+
+window.addEventListener('resize', renderCarousel);
 
 dotButtons.forEach((button, index) => {
   button.addEventListener('click', function () {
@@ -168,11 +175,22 @@ dotButtons.forEach((button, index) => {
 
     activeIndex = index;
     this.dataset.active = 'true';
-
-    cards.forEach((card, index) => {
-      if (activeIndex === index) {
-        cards[index].scrollIntoView({ behavior: 'smooth' });
-      }
-    });
+    renderCarousel();
   });
 });
+
+function renderCarousel() {
+  if (window.innerWidth < 1024) {
+    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+  } else {
+    const wrapperCenterPosition = outerWrapper.clientWidth / 2;
+
+    const activeCard = cards[activeIndex];
+    const cardCenterPosition =
+      activeCard.offsetLeft + activeCard.clientWidth / 2;
+
+    track.style.transform = `translateX(${wrapperCenterPosition - cardCenterPosition}px)`;
+  }
+}
+
+// cards[activeIndex].scrollIntoView({ behavior: 'smooth' });
