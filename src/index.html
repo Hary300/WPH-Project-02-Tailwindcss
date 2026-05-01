@@ -970,7 +970,7 @@
 
         <!-- 9.2 testimony -->
         <div
-          class="outer-wrapper relative flex flex-col gap-4 items-center overflow-x-hidden w-full lg:before:bg-linear-to-r lg:before:from-white lg:dark:before:from-black lg:before:from-30% lg:before:to-transparent lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:h-full lg:before:w-40 lg:before:z-10 lg:before:pointer-events-none lg:after:bg-linear-to-l lg:after:from-white lg:dark:after:from-black lg:after:from-30% lg:after:to-transparent lg:after:absolute lg:after:right-0 lg:after:top-0 lg:after:h-full lg:after:w-40 lg:after:z-10 lg:after:pointer-events-none"
+          class="outer-wrapper relative flex flex-col gap-4 items-center overflow-x-hidden w-full lg:before:bg-linear-to-r lg:before:from-white lg:dark:before:from-black lg:before:from-10% lg:before:to-transparent lg:before:absolute lg:before:left-0 lg:before:top-0 lg:before:h-full lg:before:w-60 lg:before:z-10 lg:before:pointer-events-none lg:after:bg-linear-to-l lg:after:from-white lg:dark:after:from-black lg:after:from-10% lg:after:to-transparent lg:after:absolute lg:after:right-0 lg:after:top-0 lg:after:h-full lg:after:w-60 lg:after:z-10 lg:after:pointer-events-none"
         >
           <div
             class="testimony-track flex lg:gap-2 pt-6 pb-10 transition-transform duration-300 w-full"
@@ -1584,7 +1584,7 @@
             </div>
 
             <button
-              class="bg-black p-2 w-full rounded-full font-bold text-base inset-shadow-[4px_4px_4px_rgba(255,255,255,0.25)]"
+              class="bg-black p-2 w-full rounded-full font-bold text-base inset-shadow-[4px_4px_4px_rgba(255,255,255,0.25)] mt-auto"
             >
               Free Consultation
             </button>
@@ -1593,6 +1593,93 @@
       </section>
 
       <!-- 11. READY TO START SECTION (FORM) -->
+
+      <section
+        id="ready-to-start"
+        class="flex flex-col justify-center lg:max-w-[720px] m-auto gap-10 lg:gap-16"
+      >
+        <!-- 11.1 text -->
+        <div class="flex flex-col gap-3 w-full text-center">
+          <h2 class="font-bold text-3xl lg:text-5xl">
+            Ready to Start? Let's Talk.
+          </h2>
+          <p class="font-semibold text-sm lg:text-lg dark:text-[#A4A7AE]">
+            Tell us what you need, and we'll get back to you soon.
+          </p>
+        </div>
+
+        <!-- 11.2 form-->
+
+        <form class="w-full flex flex-col gap-5">
+          <!-- Name -->
+          <div class="flex flex-col gap-2">
+            <label class="font-semibold">Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="border dark:border-[#252B37] border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="flex flex-col gap-2">
+            <label class="font-semibold">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="border dark:border-[#252B37] border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            />
+          </div>
+
+          <!-- Message -->
+          <div class="flex flex-col gap-2">
+            <label class="font-semibold">Message</label>
+            <textarea
+              rows="4"
+              placeholder="Enter your message"
+              class="border dark:border-[#252B37] border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            ></textarea>
+          </div>
+
+          <!-- Services -->
+          <div class="flex flex-col gap-2">
+            <label class="font-semibold">Services</label>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2 text-sm"
+            >
+              <label class="flex gap-2">
+                <input type="checkbox" class="dark:accent-[#252B37]" />
+                <span>Web Development</span>
+              </label>
+              <label class="flex gap-2">
+                <input type="checkbox" class="dark:accent-[#252B37]" />
+                <span>Cloud Solutions</span>
+              </label>
+              <label class="flex gap-2">
+                <input type="checkbox" class="dark:accent-[#252B37]" />
+                <span>Mobile App Development</span>
+              </label>
+              <label class="flex gap-2">
+                <input type="checkbox" class="dark:accent-[#252B37]" />
+                <span>Software Development</span>
+              </label>
+              <label class="flex gap-2">
+                <input type="checkbox" class="dark:accent-[#252B37]" />
+                <span>UI/UX Design</span>
+              </label>
+              <label class="flex gap-2">
+                <input type="checkbox" class="dark:accent-[#252B37]" />
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Send Button -->
+          <div>
+            <button type="submit" class="btn">Send</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <!-- 12. FOOTER SECTION -->
