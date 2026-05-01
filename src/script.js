@@ -1,4 +1,4 @@
-// dark mode button
+// ==== HEADER SECTION (DARK BUTTON) ===
 const darkButton = document.querySelector('.dark-button');
 darkButton.addEventListener('click', function () {
   document.documentElement.classList.toggle('dark');
@@ -36,7 +36,7 @@ darkButton.addEventListener('click', function () {
       `;
 });
 
-// offset menu
+// ==== HEADER SECTION (OFFSET MENU) ===
 const hamburgerButton = document.querySelector('.hamburger-button');
 const offsetMenu = document.querySelector('.offset-menu');
 
@@ -46,7 +46,7 @@ hamburgerButton.addEventListener('click', function () {
   document.body.classList.toggle('overflow-hidden');
 });
 
-// marquee
+// ==== TRUSTED BY GLOBAL INNOVATORS SECTION (MARQUEE) ====
 
 const logoTrack = document.querySelector('.logo-track');
 let position = 0;
@@ -98,9 +98,8 @@ document.addEventListener('mouseup', function () {
 
 animateMarquee();
 
-// Accodion Our process section
-
-const items = document.querySelectorAll('.item');
+// ==== OUR PROCESS SECTION (TIMELINE/ACCORDION) ====
+const items = document.querySelectorAll('.our-process-item');
 
 items.forEach((item, index) => {
   const btn = item.querySelector('.acc-chev-btn');
@@ -122,7 +121,7 @@ items.forEach((item, index) => {
   });
 });
 
-// tabs
+// ==== BUILT FOR YOUR INDUSTRY SECTION (TABS) ====
 const tabButtons = document.querySelectorAll('.tabs-buttons button');
 const tabContents = document.querySelectorAll('.tab-contents .content');
 
@@ -152,7 +151,7 @@ tabButtons.forEach((button) => {
   });
 });
 
-// carousel
+// ==== WHAT PARTNERS SAY SECTION (TESTIMONY/CAROUSEL) ====
 
 const dotButtons = document.querySelectorAll('.dot');
 const track = document.querySelector('.testimony-track');
@@ -194,3 +193,37 @@ function renderCarousel() {
 }
 
 // cards[activeIndex].scrollIntoView({ behavior: 'smooth' });
+
+// ==== NEED HELP? SECTION (FAQ ACCORDION) ====
+const needHelpAccItems = document.querySelectorAll('.need-help-acc-item');
+
+let activeItemIndex = null;
+
+needHelpAccItems.forEach((item, index) => {
+  const button = item.querySelector('.faq-acc-button');
+
+  button.addEventListener('click', function () {
+    if (index === activeItemIndex) {
+      activeItemIndex = null;
+    } else {
+      activeItemIndex = index;
+    }
+
+    renderAcc();
+  });
+});
+
+function renderAcc() {
+  needHelpAccItems.forEach((item, index) => {
+    const content = item.querySelector('.faq-acc-content');
+    const verticalLine = item.querySelector('.vertical-line');
+
+    if (index === activeItemIndex) {
+      content.style.height = `${content.scrollHeight}px`;
+      verticalLine.classList.add('opacity-0');
+    } else {
+      content.style.height = `0px`;
+      verticalLine.classList.remove('opacity-0');
+    }
+  });
+}
