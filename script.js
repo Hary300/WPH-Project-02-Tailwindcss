@@ -334,7 +334,7 @@ function renderModal() {
   modal.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
   modal.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
 
-  let isSuccess = Math.random() < 0.5;
+  let isSuccess = Math.random() * 3 < 2;
 
   if (isSuccess) {
     updateUI(success, modalBox);
