@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +19,10 @@
     <!-- ========== 1. HEADER SECTION ========== -->
     <header
       id="header"
-      class="container w-full flex justify-between sticky h-16 top-0 p-4 backdrop-blur-xl z-10 md:px-[30px] lg:px-[80px] xl:px-[140px] m-auto"
+      class="container w-full flex justify-between sticky h-16 top-0 p-4 backdrop-blur-xl z-15 md:px-[30px] lg:px-[80px] xl:px-[140px] m-auto"
     >
       <!-- 1.1 Logo -->
-      <div class="flex items-center gap-3">
+      <div class="logo flex items-center gap-3 cursor-pointer">
         <img src="./assets/img/light/logo-symbol.svg" alt="Logo" />
         <h1 class="font-outfit font-semibold text-2xl">Your Logo</h1>
       </div>
@@ -33,11 +33,25 @@
         <ul
           class="flex justify-center items-center lg:gap-8 font-semibold text-4 w-full dark:text-[#FDFDFD] text-black"
         >
-          <li><a href="#">About</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li>
+            <a href="#smart-IT-solution" class="hover:text-[#FF623E]">About</a>
+          </li>
+          <li>
+            <a href="#build-for-your-industry" class="hover:text-[#FF623E]"
+              >Service</a
+            >
+          </li>
+          <li>
+            <a href="#from-vision-to-launch" class="hover:text-[#FF623E]"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#what-partners-say" class="hover:text-[#FF623E]"
+              >Testimonials</a
+            >
+          </li>
+          <li><a href="#need-help" class="hover:text-[#FF623E]">FAQ</a></li>
         </ul>
       </nav>
 
@@ -71,9 +85,11 @@
         </button>
 
         <!--  1.3.3. let's talk button (desktop) -->
-        <div class="button-container hidden lg:flex w-full">
-          <button class="btn">Let's Talk</button>
-        </div>
+        <a href="#ready-to-start" class="w-full">
+          <div class="button-container hidden lg:flex w-full">
+            <button class="btn">Let's Talk</button>
+          </div>
+        </a>
       </div>
     </header>
 
@@ -85,17 +101,19 @@
       <ul
         class="flex flex-col justify-center gap-4 font-semibold text-4 w-full dark:text-[#FDFDFD] text-black"
       >
-        <li><a href="#">About</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a href="#smart-IT-solution">About</a></li>
+        <li><a href="#build-for-your-industry">Service</a></li>
+        <li><a href="#from-vision-to-launch">Projects</a></li>
+        <li><a href="#what-partners-say">Testimonials</a></li>
+        <li><a href="#need-help">FAQ</a></li>
       </ul>
 
       <!-- 1.4.2 Let's talk button -->
-      <div class="button-container w-full dark:bg-black">
-        <button class="btn">Let's Talk</button>
-      </div>
+      <a href="#ready-to-start" class="w-full">
+        <div class="button-container w-full dark:bg-black">
+          <button class="offset-button btn">Let's Talk</button>
+        </div></a
+      >
     </nav>
 
     <!-- ========== 2. HERO SECTION ========== -->
@@ -117,9 +135,11 @@
         </p>
 
         <!-- 2.2 Hero button -->
-        <button class="btn lg:text-base mt-5 mb-10 lg:max-w-[200px]">
-          Let's Talk
-        </button>
+        <a href="#ready-to-start" class="w-full">
+          <button class="btn lg:text-base mt-5 mb-10 lg:max-w-[200px]">
+            Let's Talk
+          </button></a
+        >
       </div>
 
       <!-- 2.3 Hero Image -->
@@ -316,46 +336,62 @@
 
         <!-- 4.2 grid -->
         <div class="grid w-full grid-cols-2 md:grid-cols-4 gap-4 lg:gap-5">
-          <!-- light mode card -->
+          <!-- card -->
           <div
-            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2"
+            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2 hover:[&>.value]:animate-bounce hover:scale-105 transition-transform duration-300 hover:border-[#FF623E]"
           >
-            <p class="text-4xl lg:text-5xl text-[#FF623E] font-bold">50+</p>
             <p
-              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE]"
+              class="value text-4xl lg:text-5xl text-[#FF623E] font-bold transition-all"
+            >
+              50+
+            </p>
+            <p
+              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE] transition-all"
             >
               Project delivered
             </p>
           </div>
 
           <div
-            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2"
+            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2 hover:[&>.value]:animate-bounce hover:scale-105 transition-transform duration-300 hover:border-[#FF623E]"
           >
-            <p class="text-4xl lg:text-5xl text-[#FF623E] font-bold">5+</p>
             <p
-              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE]"
+              class="value text-4xl lg:text-5xl text-[#FF623E] font-bold transition-all"
+            >
+              5+
+            </p>
+            <p
+              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE] transition-all"
             >
               Years of experience
             </p>
           </div>
 
           <div
-            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2"
+            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2 hover:[&>.value]:animate-bounce hover:scale-105 transition-transform duration-300 hover:border-[#FF623E]"
           >
-            <p class="text-4xl lg:text-5xl text-[#FF623E] font-bold">10+</p>
             <p
-              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE]"
+              class="value text-4xl lg:text-5xl text-[#FF623E] font-bold transition-all"
+            >
+              10+
+            </p>
+            <p
+              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE] transition-all"
             >
               Industry Awards won
             </p>
           </div>
 
           <div
-            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2"
+            class="flex flex-col justify-center items-center rounded-full border border-[#DEDCDC] dark:border-[#181D27] bg-[#FAFAFA] dark:bg-[#0A0D12] aspect-square gap-1 lg:gap-2 hover:[&>.value]:animate-bounce hover:scale-105 transition-transform duration-300 hover:border-[#FF623E]"
           >
-            <p class="text-4xl lg:text-5xl text-[#FF623E] font-bold">100%</p>
             <p
-              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE]"
+              class="value text-4xl lg:text-5xl text-[#FF623E] font-bold transition-all"
+            >
+              100%
+            </p>
+            <p
+              class="text-sm lg:text-lg font-semibold max-w-[135px] md:max-w-none dark:text-[#A4A7AE] transition-all"
             >
               Client satisfactory rate
             </p>
@@ -392,7 +428,7 @@
             </div>
 
             <div
-              class="our-process-item flex flex-col w-full lg:w-[47%] p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27]"
+              class="our-process-item flex flex-col w-full lg:w-[47%] p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
             >
               <button
                 class="acc-chev-btn flex justify-between items-center cursor-pointer text-base font-bold transition-all duration-300 text-left"
@@ -432,7 +468,7 @@
             </div>
 
             <div
-              class="our-process-item flex flex-col w-full lg:w-[47%] lg:ml-auto p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27]"
+              class="our-process-item flex flex-col w-full lg:w-[47%] lg:ml-auto p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
             >
               <button
                 class="acc-chev-btn flex justify-between items-center cursor-pointer text-base font-bold transition-all duration-300 text-left"
@@ -472,7 +508,7 @@
             </div>
 
             <div
-              class="our-process-item flex flex-col w-full lg:w-[47%] p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27]"
+              class="our-process-item flex flex-col w-full lg:w-[47%] p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
             >
               <button
                 class="acc-chev-btn flex justify-between items-center cursor-pointer text-base font-bold transition-all duration-300 text-left"
@@ -512,7 +548,7 @@
             </div>
 
             <div
-              class="our-process-item flex flex-col w-full lg:w-[47%] lg:ml-auto p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27]"
+              class="our-process-item flex flex-col w-full lg:w-[47%] lg:ml-auto p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
             >
               <button
                 class="acc-chev-btn flex justify-between items-center cursor-pointer text-base font-bold transition-all duration-300 text-left"
@@ -552,7 +588,7 @@
             </div>
 
             <div
-              class="our-process-item flex flex-col w-full lg:w-[47%] p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27]"
+              class="our-process-item flex flex-col w-full lg:w-[47%] p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
             >
               <button
                 class="acc-chev-btn flex justify-between items-center cursor-pointer text-base font-bold transition-all duration-300 text-left"
@@ -597,7 +633,7 @@
             </div>
 
             <div
-              class="our-process-item flex flex-col w-full lg:w-[47%] lg:ml-auto p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27]"
+              class="our-process-item flex flex-col w-full lg:w-[47%] lg:ml-auto p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#0A0D12] border border-[#DEDCDC] dark:border-[#181D27] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
             >
               <button
                 class="acc-chev-btn flex justify-between items-center cursor-pointer text-base font-bold transition-all duration-300 text-left"
@@ -654,7 +690,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <!-- card 1 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">Web Development</h2>
@@ -669,7 +705,7 @@
 
           <!-- card 2 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">Mobile App Development</h2>
@@ -684,7 +720,7 @@
 
           <!-- card 3 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">UI/UX Design</h2>
@@ -699,7 +735,7 @@
 
           <!-- card 4 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">Cloud Solutions</h2>
@@ -714,7 +750,7 @@
 
           <!-- card 5 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">Software Development</h2>
@@ -729,7 +765,7 @@
 
           <!-- card 6 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">IT Infrastructure</h2>
@@ -744,7 +780,7 @@
 
           <!-- card 7 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">Cybersecurity Services</h2>
@@ -759,7 +795,7 @@
 
           <!-- card 8 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">QA Solutions</h2>
@@ -774,7 +810,7 @@
 
           <!-- card 9 -->
           <div
-            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC]"
+            class="relative dark:bg-[#0A0D12] dark:border-[#181D27] bg-[#FAFAFA] pt-12 lg:pt-20 px-5 pb-5 rounded-2xl border border-[#DEDCDC] hover:scale-101 hover:border-[#FF623E] transition-transform duration-300"
           >
             <div class="flex flex-col gap-4">
               <h2 class="font-bold text-4 lg:text-5">
@@ -814,21 +850,21 @@
             <button
               data-active="true"
               data-tab="fintech"
-              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862]"
+              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862] cursor-pointer"
             >
               Fintech
             </button>
             <button
               data-active="false"
               data-tab="e-commerce"
-              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862]"
+              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862] cursor-pointer"
             >
               E-Commerce
             </button>
             <button
               data-active="false"
               data-tab="healthcare"
-              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862]"
+              class="text-left border-l-4 text-[#AAAAAA] border-[#AAAAAA] data-[active=true]:border-[#FF623E] data-[active=true]:text-black data-[active=true]:dark:text-white pl-5 font-bold text-base lg:text-xl dark:text-[#535862] cursor-pointer"
             >
               Healthcare
             </button>
@@ -914,7 +950,7 @@
             <img
               src="./assets/img/portfolio-images/portfolio1.svg"
               alt="Portfolio1"
-              class="rounded-2xl overflow-hidden"
+              class="rounded-2xl overflow-hidden hover:scale-105 hover:border hover:border-[#FF623E] transition-transform duration-300"
             />
             <p class="font-medium text-[#FF623E] text-sm lg:text-base">
               Landing page
@@ -928,6 +964,7 @@
             <img
               src="./assets/img/portfolio-images/portfolio2.svg"
               alt="Portfolio2"
+              class="rounded-2xl hover:scale-105 hover:border hover:border-[#FF623E] transition-transform duration-300"
             />
             <p class="font-medium text-[#FF623E] text-sm lg:text-base">
               Landing page
@@ -941,7 +978,7 @@
             <img
               src="./assets/img/portfolio-images/portfolio3.svg"
               alt="Portfolio3"
-              class="rounded-2xl overflow-hidden"
+              class="rounded-2xl overflow-hidden hover:scale-105 hover:border hover:border-[#FF623E] transition-transform duration-300"
             />
             <p class="font-medium text-[#FF623E] text-sm lg:text-base">
               Landing page
@@ -1323,15 +1360,17 @@
         </div>
 
         <!-- line -->
-        <div class="w-full h-[1px] bg-[#DFDFDF]"></div>
+        <div class="w-full h-[1px] bg-[#DFDFDF] dark:bg-[#252B37]"></div>
 
         <div class="flex flex-col lg:flex-row gap-6 lg:justify-between">
           <!-- 10.2 FAQ accordion -->
           <div
-            class="flex flex-col w-full lg:w-[70%] divide-y divide-[#DFDFDF] gap-7"
+            class="flex flex-col w-full lg:w-[70%] divide-y divide-[#DFDFDF] dark:divide-[#252B37] gap-7"
           >
             <!-- item 1 -->
-            <div class="need-help-acc-item overflow-hidden">
+            <div
+              class="need-help-acc-item overflow-hidden hover:[&>.faq-acc-button]:text-[#FF623E]"
+            >
               <button
                 class="faq-acc-button flex py-2 justify-between font-bold text-lg lg:text-2xl w-full text-left cursor-pointer"
               >
@@ -1346,14 +1385,14 @@
                   >
                     <path
                       d="M5 12H19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M12 5V19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -1377,7 +1416,9 @@
             </div>
 
             <!-- item 2 -->
-            <div class="need-help-acc-item overflow-hidden">
+            <div
+              class="need-help-acc-item overflow-hidden hover:[&>.faq-acc-button]:text-[#FF623E]"
+            >
               <button
                 class="faq-acc-button flex py-2 justify-between font-bold text-lg lg:text-2xl w-full text-left cursor-pointer"
               >
@@ -1393,14 +1434,14 @@
                   >
                     <path
                       d="M5 12H19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M12 5V19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -1424,7 +1465,9 @@
             </div>
 
             <!-- item 3 -->
-            <div class="need-help-acc-item overflow-hidden">
+            <div
+              class="need-help-acc-item overflow-hidden hover:[&>.faq-acc-button]:text-[#FF623E]"
+            >
               <button
                 class="faq-acc-button flex py-2 justify-between font-bold text-lg lg:text-2xl w-full text-left cursor-pointer"
               >
@@ -1439,14 +1482,14 @@
                   >
                     <path
                       d="M5 12H19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M12 5V19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -1470,7 +1513,9 @@
             </div>
 
             <!-- item 4 -->
-            <div class="need-help-acc-item overflow-hidden">
+            <div
+              class="need-help-acc-item overflow-hidden hover:[&>.faq-acc-button]:text-[#FF623E]"
+            >
               <button
                 class="faq-acc-button flex py-2 justify-between font-bold text-lg lg:text-2xl w-full text-left cursor-pointer"
               >
@@ -1485,14 +1530,14 @@
                   >
                     <path
                       d="M5 12H19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M12 5V19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -1516,7 +1561,9 @@
             </div>
 
             <!-- item 5 -->
-            <div class="need-help-acc-item overflow-hidden">
+            <div
+              class="need-help-acc-item overflow-hidden hover:[&>.faq-acc-button]:text-[#FF623E]"
+            >
               <button
                 class="faq-acc-button flex py-2 justify-between font-bold text-lg lg:text-2xl w-full text-left cursor-pointer"
               >
@@ -1531,14 +1578,14 @@
                   >
                     <path
                       d="M5 12H19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
                     <path
                       d="M12 5V19"
-                      stroke="#0A0D12"
+                      stroke="currentColor"
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
@@ -1582,12 +1629,13 @@
                 class="w-full"
               />
             </div>
-
-            <button
-              class="bg-black p-2 w-full rounded-full font-bold text-base inset-shadow-[4px_4px_4px_rgba(255,255,255,0.25)] mt-auto"
+            <a href="#ready-to-start" class="w-full">
+              <button
+                class="bg-black p-2 w-full rounded-full font-bold text-base inset-shadow-[4px_4px_4px_rgba(255,255,255,0.25)] mt-auto cursor-pointer hover:scale-102 transition-transform duration-300 active:scale-98"
+              >
+                Free Consultation
+              </button></a
             >
-              Free Consultation
-            </button>
           </div>
         </div>
       </section>
@@ -1746,7 +1794,7 @@
       >
         <!-- 12.1 text -->
         <div class="w-full flex flex-col gap-6 lg:flex-row lg:justify-between">
-          <div class="order-1 lg:order-2 flex gap-2">
+          <div class="logo order-1 lg:order-2 flex gap-2 cursor-pointer">
             <img
               src="./assets/img/light/logo-symbol.svg"
               alt="Logo"

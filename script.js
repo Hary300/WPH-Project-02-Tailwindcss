@@ -35,6 +35,17 @@ darkButton.addEventListener('click', function () {
 </svg>
       `;
 });
+// ==== HEADER SECTION (LOGO CLICK) ===
+
+const logos = document.querySelectorAll('.logo');
+logos.forEach((logo) => {
+  logo.addEventListener('click', function () {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+});
 
 // ==== HEADER SECTION (OFFSET MENU) ===
 const hamburgerButton = document.querySelector('.hamburger-button');
@@ -44,6 +55,17 @@ hamburgerButton.addEventListener('click', function () {
   hamburgerButton.classList.toggle('active');
   offsetMenu.classList.toggle('active');
   document.body.classList.toggle('overflow-hidden');
+});
+
+document.addEventListener('click', function (event) {
+  const isNavMenu = event.target.closest('nav ul li');
+  const isBtn = event.target.closest('nav .offset-button');
+
+  if (isNavMenu || isBtn) {
+    hamburgerButton.classList.remove('active');
+    offsetMenu.classList.remove('active');
+    document.body.classList.remove('overflow-hidden');
+  }
 });
 
 // ==== TRUSTED BY GLOBAL INNOVATORS SECTION (MARQUEE) ====
