@@ -128,7 +128,7 @@ items.forEach((item, index) => {
 
   btn.addEventListener('click', function () {
     const isActive = item.classList.contains('active');
-    const content = item.querySelector('p');
+    const content = item.querySelector('.content-conteiner');
     const icon = btn.querySelector('svg');
 
     if (!isActive) {

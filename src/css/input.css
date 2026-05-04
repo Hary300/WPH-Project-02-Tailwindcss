@@ -60,9 +60,6 @@ nav.active {
 
 /* accordion our process */
 
-.number {
-  z-index: 5;
-}
-.item.active button {
+/* .item.active button {
   margin-bottom: 10px;
-}
+} */
