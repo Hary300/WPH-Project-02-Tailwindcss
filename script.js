@@ -35,6 +35,7 @@ darkButton.addEventListener('click', function () {
 </svg>
       `;
 });
+
 // ==== HEADER SECTION (LOGO CLICK) ===
 
 const logos = document.querySelectorAll('.logo');
@@ -334,7 +335,7 @@ const modal = document.querySelector('.modal');
 
 function renderModal() {
   let success = {
-    src: './assets/img/modal-images/success.svg',
+    src: './assets/img/modal-images/success.png',
     alt: 'an envelop with a check mark',
     title: 'Message Received!',
     paragraph:
@@ -343,7 +344,7 @@ function renderModal() {
   };
 
   let fail = {
-    src: './assets/img/modal-images/fail.svg',
+    src: './assets/img/modal-images/fail.png',
     alt: 'an envelop with a cross mark',
     title: 'Oops! Something went wrong.',
     paragraph:
@@ -378,11 +379,11 @@ document.addEventListener('click', function (e) {
 
 function updateUI(status, modalBox) {
   modalBox.innerHTML = `
-<div class="w-full pt-6 bg-[#FAFAFA] dark:bg-[#0A0D12]">
+<div class="flex justify-center w-full pt-6 bg-[#FAFAFA] dark:bg-[#0A0D12]">
   <img
     src=${status.src}
     alt=${status.alt}
-    class='size-35 w-full'
+    class='size-35'
   />
 </div>
 <div class="text flex flex-col gap-2 px-6 items-center">
